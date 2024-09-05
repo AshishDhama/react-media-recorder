@@ -34,8 +34,8 @@ export type ReactMediaRecorderHookProps = {
   customMediaStream?: MediaStream | null;
   stopStreamsOnStop?: boolean;
   askPermissionOnMount?: boolean;
-  onChunkAvailable: (chunk: Blob) => void; // Callback for incremental chunk handling
-  chunkSize: number; // Default chunk size 5 KB
+  onChunkAvailable?: (chunk: Blob) => void; // Callback for incremental chunk handling
+  chunkSize?: number; // Default chunk size 5 KB
 };
 export type ReactMediaRecorderProps = ReactMediaRecorderHookProps & {
   render: (props: ReactMediaRecorderRenderProps) => ReactElement;
